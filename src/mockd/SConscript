@@ -1,0 +1,9 @@
+Import("env")
+
+env["CPPPATH"] = ["#include"]
+env["LIBS"] = ["common", "rt"]
+env["LIBPATH"] = ["../common"]
+
+env.ParseConfig(env["CONFIG_PARSER"])
+
+env.Program("mockd", ["mockd.c"])

@@ -1,0 +1,72 @@
+AccessModifierOffset: -4
+AlignEscapedNewlines: Left
+AlignOperands: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: false
+BinPackParameters: false
+BraceWrapping:
+  AfterFunction: true
+  SplitEmptyRecord: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBraces: Custom
+BreakConstructorInitializers: BeforeComma
+Cpp11BracedListStyle: false
+IndentCaseLabels: true
+IndentWidth: 4
+PenaltyBreakBeforeFirstCallParameter: 200
+PenaltyReturnTypeOnItsOwnLine: 600
+SpaceBeforeCpp11BracedList: true
+TabWidth: 4
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '^<analyze/'
+    Priority:        2
+  - Regex:           '^<async/'
+    Priority:        2
+  - Regex:           '^<asynccrypto/'
+    Priority:        2
+  - Regex:           '^<asynchttp/'
+    Priority:        2
+  - Regex:           '^<asynctls/'
+    Priority:        2
+  - Regex:           '^<doormand-client/'
+    Priority:        2
+  - Regex:           '^<encjson\.h>'
+    Priority:        2
+  - Regex:           '^<fsdyn/'
+    Priority:        2
+  - Regex:           '^<fsenforcer/'
+    Priority:        2
+  - Regex:           '^<fsengine/'
+    Priority:        2
+  - Regex:           '^<fsformat/'
+    Priority:        2
+  - Regex:           '^<fssha1/'
+    Priority:        2
+  - Regex:           '^<fstrace\.h>'
+    Priority:        2
+  - Regex:           '^<linuxkit/'
+    Priority:        2
+  - Regex:           '^<logfile\.h>'
+    Priority:        2
+  - Regex:           '^<nwutil\.h>'
+    Priority:        2
+  - Regex:           '^<pmdkit/'
+    Priority:        2
+  - Regex:           '^<rotatable/'
+    Priority:        2
+  - Regex:           '^<unix-scanner\.hpp>'
+    Priority:        2
+  - Regex:           '^<unixkit/'
+    Priority:        2
+  - Regex:           '^<url-parser/'
+    Priority:        2
+  - Regex:           '^<fs[[:alnum:]_]+\.h>'
+    Priority:        2
+  - Regex:           '^<'
+    Priority:        3
+  - Regex:           '.*'
+    Priority:        1

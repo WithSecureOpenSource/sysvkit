@@ -1,0 +1,22 @@
+Import("env")
+
+env["CPPPATH"] = ["#include"]
+env["LIBS"] = ["common", "rt"]
+env["LIBPATH"] = ["../common"]
+
+env.ParseConfig(env["CONFIG_PARSER"])
+
+env.Program(
+    "systemctl",
+    [
+        "enable-disable.c",
+        "noop.c",
+        "options.c",
+        "reload.c",
+        "service.c",
+        "show.c",
+        "start-stop.c",
+        "status.c",
+        "systemctl.c",
+    ],
+)

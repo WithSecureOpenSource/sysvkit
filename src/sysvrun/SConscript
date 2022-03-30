@@ -1,0 +1,19 @@
+Import("env")
+
+env["CPPPATH"] = ["#include"]
+env["LIBS"] = ["common", "rt"]
+env["LIBPATH"] = ["../common"]
+
+env.ParseConfig(env["CONFIG_PARSER"])
+
+env.Program(
+    "sysvrun",
+    [
+        "command.c",
+        "monitor.c",
+        "service.c",
+        "systemd.c",
+        "sysvinit.c",
+        "sysvrun.c",
+    ],
+)

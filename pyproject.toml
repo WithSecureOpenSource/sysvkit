@@ -1,0 +1,4 @@
+[tool.black]
+line-length = 80
+include = '\.py$|\.tc$|\.tctpl$|SConstruct$|SConscript$'
+exclude = 'stage'

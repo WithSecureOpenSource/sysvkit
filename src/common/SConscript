@@ -1,0 +1,24 @@
+Import("env")
+
+env["CPPPATH"] = ["#include"]
+
+env.ParseConfig(env["CONFIG_PARSER"])
+
+env.Library(
+    "common",
+    [
+        "clock.c",
+        "cn_proc.c",
+        "environment.c",
+        "fork.c",
+        "procwatch.c",
+        "noise.c",
+        "pair.c",
+        "proctitle.c",
+        "strbool.c",
+        "strlist.c",
+        "text.c",
+        "unit.c",
+        "timespan.c",
+    ],
+)

@@ -1,0 +1,13 @@
+Import("env")
+
+import os
+
+sbin = env.Install(
+    "sbin", [
+        "../../src/systemctl/systemctl",
+        "../../src/sysvrun/sysvrun",
+        "../../src/mockd/mockd"
+    ])
+
+if env["HOST_ARCH"] == env["ARCH"]:
+    env.Alias("install", env.Install(os.path.join(env["PREFIX"], "sbin"), sbin))
