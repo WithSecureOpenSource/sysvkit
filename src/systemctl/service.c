@@ -114,7 +114,7 @@ static void service_child(const char *path,
     }
     execv(path, argv);
 fail:
-    (void)write(chan, &errno, sizeof(errno));
+    OK(write(chan, &errno, sizeof(errno)));
     _exit(1);
 }
 
