@@ -8,3 +8,4 @@
 // places where we want to pass in const pointers.  Examples include struct
 // iovec (when writing) and execve(2)'s argv and envp.
 #define DQ(ptr) (void *)(uintptr_t)(ptr)
+#define OK(expr) ((void)!(expr))

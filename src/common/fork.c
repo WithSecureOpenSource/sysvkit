@@ -2,6 +2,7 @@
 
 #include "fork.h"
 
+#include "common.h"
 #include "exitcode.h"
 #include "noise.h"
 
@@ -71,7 +72,7 @@ static void df_child(child_func func, void *ptr, fork_pipe *report, fork_io *io)
     res = func(ptr);
     if (res != 0) {
         // Second report: something went wrong.
-        (void)write(REPORT_FILENO, &res, sizeof(res));
+        OK(write(REPORT_FILENO, &res, sizeof(res)));
     }
     if (res >= 0 && res <= 255) {
         _exit(res);
