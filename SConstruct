@@ -34,7 +34,7 @@ TARGET_FLAGS = {
 def construct():
     ccflags = "-g -O2 -Wall -Wextra -Werror"
     prefix = ARGUMENTS.get("prefix", "/usr/local")
-    for target_arch in fsenv.target_architectures(["linux64"]):
+    for target_arch in fsenv.target_architectures():
         arch_env = Environment(
             NAME="sysvkit",
             ARCH=target_arch,
